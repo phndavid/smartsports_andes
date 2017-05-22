@@ -1,0 +1,36 @@
+<div class="container" style="background:#fff; padding:10px;" ng-controller="OverallCtrl">
+	<div class="row">	
+	    <div class="col s12">
+    	  <table class="striped">
+	        <thead>
+	            <tr>
+	          	<th data-field="rack">RANK</th>
+	            <th data-field="riders">RIDERS</th>
+	            <th class="none" data-field="riders_num">RIDERS No.</th>
+   	            <th data-field="time">TIME</th>   	          
+	            <th data-field="bracket">BRACKET</th>
+	            <th data-field="gap">ADVANTAGE</th>	            	           
+	          </tr>
+	          <tr class="line">
+	          	<td><div>&nbsp;</div></td>
+	            <td><div>&nbsp;</div></td>
+	            <td class="none"><div>&nbsp;</div></td>
+   	            <td><div>&nbsp;</div></td>   	          
+	            <td><div>&nbsp;</div></td>
+	            <td><div>&nbsp;</div></td>	            	           
+	          </tr>
+	        </thead>
+	        <tbody>
+	          <tr ng-repeat="top in overall_result | limitTo:10">        
+	            <td><b>{{top.rank}}.</b></td>
+	            <td>{{top.riders}}</td>
+				<td class="none">{{top.riders_no}}</td>	         	            
+	            <td><b>{{top.time}}</b></td>
+	            <td>{{top.bracket}}</td>
+	            <td><b>{{top.gap}}</b></td>
+	          </tr>
+	        </tbody>
+	      </table>
+	    </div>
+    </div>
+</div>

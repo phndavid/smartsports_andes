@@ -1,0 +1,134 @@
+ @font-face{ 
+    font-family: Raleway; 
+    src: url('../font/Raleway-Regular.ttf');
+ }
+ @font-face{ 
+    font-family: DINPro; 
+    src: url('../font/DINPro-Cond.woff');
+ }
+ 
+body{
+    background-color: #434343;
+    padding: 0px;
+    margin: 0px auto;
+    font-family: DINPro;
+}
+thead{
+    border: none;
+}
+th{
+    padding: 0px 5px;
+}
+td{
+    padding: 5px 5px;
+}
+footer{
+    background-color: #0F2362;
+    position: fixed;
+    height: 45px;
+    top: calc(100% - 45px);
+    width: 100%;
+}
+nav ul a {
+    font-size: 1.4rem !important;
+    padding: 0px 25px;
+}
+.banner{
+    background: #158AA8;
+    height:150px;
+}
+.line > td > div{
+    background-color:#de6127;
+    height: 4px;
+}
+.lg-legend{
+    height:150px;
+    float: right;
+}
+.lg-chrono{
+    height: 38px; 
+    width: 120px; 
+    margin-right: 50px;
+    margin-top: 3px;
+}
+.lg-athlinks{
+    height: 30px; 
+    width: 110px; 
+    margin-right: 50px;
+    margin-top: 10px;    
+}
+.endurance{
+    margin-left: -30px !important;
+}
+.sub-title{
+    font-size: 10pt;
+    display: -webkit-inline-box;
+    height: 20px;
+    margin-left: -145px;
+}
+.title{
+    margin-bottom: 0px;
+    color: #fff;
+}
+.img-endurance{
+    width: 180px;
+    height: 38px;
+    margin-top: 3px;
+}
+.dev{ 
+    color: #fff;
+    font-size: 12pt;
+    position: fixed;
+    margin-top: 10px;
+}
+@media(max-width: 1272px){
+    .dev{
+        margin-top: 0px;
+    }
+    .title{
+        font-size: 20pt;
+    }
+}
+@media(max-width: 757px){
+    .none{
+        display: none;
+    }
+    .endurance{
+        margin-left: 0px !important;
+        width: 50% !important;
+    }
+    .dev{
+        font-size: 12pt;
+        text-align: right;
+        margin-right: 10px;
+    }
+}
+@media(max-width: 425px){
+    .lg-legend{
+        height: 110px;
+    }
+    .lg-chrono{
+        height: 30px;
+        width: 90px;
+    }
+}
+@media(max-width: 320px){
+    footer{
+        text-align: center;
+    }
+    .by{
+        width: 0px !important;
+    }
+    .dev{
+        font-size: 11pt;
+    }
+    .img-endurance{
+        width: 135px;
+    }
+    .lg-chrono{
+        display: none;
+    }
+    .title{
+        font-size: 25pt;
+    }
+}

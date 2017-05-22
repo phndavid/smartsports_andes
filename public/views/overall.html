@@ -1,0 +1,57 @@
+<div class="container" style="background:#fff; padding:10px;" ng-controller="OverallCtrl">
+	<div class="row">
+		<div class="col s12">
+		<div class="input-field col s4">
+		    <select id="select">
+		      <option value="Overall">General Classification</option>
+		      <option value="MASTER A">MASTER A</option>
+		      <option value="MASTER B">MASTER B</option>
+		      <option value="MASTER C">MASTER C</option>
+		      <option value="MASTER FEMENINO">MASTER FEMENINO</option>
+		      <option value="OPEN FEMENINO">OPEN FEMENINO</option>
+		      <option value="OPEN MASCULINO">OPEN MASCULINO</option>
+		      <option value="PAREJAS MASCULINO">PAREJAS  MASCULINO</option>
+		      <option value="PAREJAS MIXTO">PAREJAS MIXTO</option>    
+		    </select>
+		    <label>Choose your bracket</label>
+		</div>
+	   </div>
+	    <div class="col s12">
+    	  <table class="striped">
+	        <thead>
+	          <tr>
+	          	<th data-field="rack">RANK</th>
+	            <th data-field="riders">RIDERS</th>
+	            <th class="none" data-field="riders_num">RIDERS No.</th>
+   	            <th data-field="bracket">BRACKET</th>
+   	            <th data-field="time">TIME</th> 
+   	             <th data-field="gap">ADVANTAGE</th>   	          	            	            	           
+	          </tr>
+	          <tr class="line">
+	          	<td><div>&nbsp;</div></td>
+	            <td><div>&nbsp;</div></td>
+	            <td class="none"><div>&nbsp;</div></td>
+   	            <td><div>&nbsp;</div></td>   	          
+	            <td><div>&nbsp;</div></td>	 
+	            <td><div>&nbsp;</div></td>	            	           
+	          </tr>
+	        </thead>
+	        <tbody>
+	          <tr ng-repeat="entry in overall_result">        
+	            <td><b>{{entry.rank}}.</b></td>
+	            <td>{{entry.riders}}</td>
+				<td class="none">{{entry.riders_no}}</td>	         
+	            <td>{{entry.bracket}}</td>
+	            <td><b>{{entry.time}}</b></td>
+	           	<td><b>{{entry.gap}}</b></td>
+	          </tr>
+	        </tbody>
+	      </table>
+	    </div>
+    </div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+    $('select').material_select();
+  });
+</script>

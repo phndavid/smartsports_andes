@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>Vuelta al Cotopaxi :: Overall Standing Classifications</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+	<link rel="icon" type="image/png" href="/img/logo.png">
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, minimal-ui, maximum-scale=1, minimum-scale=1" />
+	<meta name="description" content="Overall Standing of vuelta al Cotopaxi, Developed by SmartSports.com.co, Santiago De Los Ríos and Nelson David Padilla">
+	<meta name="author" content="Santiago De Los Ríos, Nelson David Padilla">
+	<meta name="keywords" content="carrera, race, bracket, riders, rank, the legend, smartsports">
+	<base href="/">
+</head>
+<body>
+	<div class="container">
+		<div  class="banner">
+			<div style="float: left; padding: 10px;">
+				<h3 class="title">General Classification / Clasificación General</h3>
+	    		<span style="color: #fff;">27 Mayo a 29 Mayo 2017</span> 
+	    		<br>
+			</div>
+	    	<img class="lg-legend" src="./img/andes.png" style="background-color: #fff; padding: 5px;">    	
+	    </div>
+	    <div>
+	     <nav style="background: #0F2362;">
+		      <div class="nav-wrapper">	
+		      	<div class="col s5">	     
+			        <ul class="nav hide-on-med-and-down">				          	
+			          	<li class="active col s4">
+			          		<a href="#/Top10">Top 10</a></li>
+			          	<li class="col s4">
+			          		<a href="#/Overall">
+			          			<span style="width: 145px; display: inline-block">General Classification/</span><span class="sub-title">Clasificación General</span>
+			          		</a>
+			          	</li>			
+			    		<li class="col s4">
+			    			<a href="https://results.chronotrack.com/event/results/event/event-28555">
+			    				<span style="width: 141px; display: inline-block">Stage Classification/</span>
+			    				<span class="sub-title">Clasificación por Etapas</span>
+			    			</a>
+			    		</li>
+			        </ul>
+			         <ul id="nav-mobile" class="side-nav">							        		          
+			          	<li><a href="#/Top10">Top 10</a></li>
+			          	<li><a href="#/Overall">General Classification</a></li>
+			    		<li><a href="https://results.chronotrack.com/event/results/event/event-28555">Stage Classification</a></li>				    		
+			        </ul>
+			         <a href="#" data-activates="nav-mobile" class="button-collapse">
+				         <i class="material-icons">menu</i>
+				        </a>
+				 </div>
+		      </div>
+			</nav>
+		</div>
+	</div>
+	<div ng-view style="padding-bottom: 50px;"></div>
+	<footer>
+		<div class="row">
+			<div class="col s3">
+				<a href="https://www.chronotrack.com/ "><img class="lg-chrono none" src="./img/chronotrack.png"></a>
+			</div>
+			<div class="col s3">
+				<a href="https://www.athlinks.com/">
+				<img class="lg-athlinks none" src="./img/athlinks.png"></a>
+			</div>
+			<div class="col s6 m3 endurance img-endurance">
+				 <!--a href="https://www.instagram.com/endurance_chronotrack_col/">
+				 <img  class="img-endurance" src="./img/endurance_colombia.png"></a-->
+			</div>
+		<div class="col s6 m3 by">
+		<img  class="none" style="width: 30px; height:30px; margin-top: 8px;" src="./img/smartsports.svg">
+			<span class="dev">Developed by 
+				<a href="http://smartsports.com.co/">SmartSports.com.co</a> | © 2016 Copyright
+			</span>
+		</div>
+		</div>
+	</footer>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript">		
+		 $( document ).ready(function() {
+			var selector = '.nav li';
+			$(selector).on('click', function(){
+			    $(selector).removeClass('active');
+			    $(this).addClass('active');
+			});
+			$(".button-collapse").sideNav();
+
+		});			
+	</script>
+    <!-- AngularJS -->
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

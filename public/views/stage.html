@@ -1,0 +1,37 @@
+<div class="container" style="background:#fff; padding:10px;" ng-controller="StageCtrl">
+	<div class="row">	
+	    <div class="col s12">
+    	  <table class="striped">
+	        <thead>
+	           <tr>
+	          	<th data-field="rack">RANK</th>
+	            <th data-field="riders">RIDERS</th>
+	            <th class="none" data-field="riders_num">RIDERS No.</th>   	             	         
+	            <th data-field="bracket">BRACKET</th>	   
+	            <th data-field="time">TIME</th>
+	            <th data-field="time">GAP</th>
+	          </tr>
+	          <tr class="line">
+	          	<td><div>&nbsp;</div></td>
+	            <td><div>&nbsp;</div></td>
+	            <td class="none"><div>&nbsp;</div></td>
+   	            <td><div>&nbsp;</div></td>   	          
+	            <td><div>&nbsp;</div></td>
+	            <td><div>&nbsp;</div></td>		            	           
+	          </tr>
+	        </thead>
+
+	        <tbody>
+	          <tr ng-repeat="stage in stage_result">        
+	            <td><b>{{stage.rank}}.</b></td>
+	            <td>{{stage.riders}}</td>
+				<td class="none">{{stage.riders_no}}</td>
+				<td>{{stage.bracket}}</td>	         
+	            <td><b>{{stage.time}}</b></td>
+	            <td><b>{{stage.gap}}</b></td>
+	          </tr>
+	        </tbody>
+	      </table>
+	    </div>
+    </div>
+</div>
