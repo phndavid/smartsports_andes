@@ -74,8 +74,8 @@ function processTotalResult(theTotalResults){
   var secondJSON =[]; 
   for(var i=0; i<theTotalResults.length;i++){
     var theName = theTotalResults[i].results_first_name + " - " + theTotalResults[i].results_last_name;
-    var search = searchAthleteInResults(secondJSON,theName);
-    if(theTotalResults[i].results_race_name != "SPORT DIA 2"){ 
+    var search = searchAthleteInResults(secondJSON,theName); 
+    if(theTotalResults[i].results_race_name != "SPORT DIA 2" && theTotalResults[i].results_race_name != "EQUIPOS DE 10 DIA 1"  && theTotalResults[i].results_race_name != "EQUIPOS DE 10 DIA 2" && theTotalResults[i].results_race_name != "EQUIPOS DE 10 DIA 3"){ 
       if(search.exists){
         var totalTime = secondJSON[search.index].time;
         var currentTime = theTotalResults[i].results_time_with_penalty;
@@ -105,7 +105,7 @@ function maximumNumberOfRaces(JSONTosend){
 }
 function checkAthletesWithAllRaces(JSONToSend){
   var newJSONToSend = [] 
-  var maxLength = maximumNumberOfRaces(JSONToSend); 
+  var maxLength = maximumNumberOfRaces(JSONToSend);   
   JSONToSend.forEach(function(value,index){
     if(value.races.length==maxLength){
         newJSONToSend.push(value);
